@@ -1,5 +1,7 @@
 # Milestone 1: Business Rules and ER Diagram
 
+### Please note that this is a work in progress and we still need to meet with our client to get answer to some questions. 
+
 ## Business Rules
 
 ### Club Structure
