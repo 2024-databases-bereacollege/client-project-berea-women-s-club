@@ -126,3 +126,8 @@
 ### Balance Sheet
 - Total Money at Any Time
 - Date
+
+## ER Diagram
+
+![ER Diagram](./ER Diagram.jpg)
+
