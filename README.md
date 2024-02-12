@@ -52,81 +52,37 @@
 ## Entities
 
 ### Officer
-- First Name
-- Last Name
-- Email Address
-- Date of Birth
-- Age
-- Date Joined
-- Phone Number (Multivalued)
-- Address (Street, Zip, State) (Multivalued)
-- ID
-- Permissions
-- Position
-- Dues
-- Status
+An individual with significant responsibilities within the organization (Holds a position of authority, responsible for strategic decision-making and operational oversight).
 
 ### Board Member
-- Similar structure to Officer.
+A member of the organization's governing body (Involved in policy-making and strategic governance).
 
 ### Member
-- Name
-- Email Address
-- Phone Number (Multivalued)
-- Address (Street, Zip, State) (Multivalued)
-- Date of Birth
-- Date Joined
-- ID
-- Permissions
-- Position
-- Dues
-- Status
+An individual who is part of the organization (Participates in activities, pays dues, and may have voting rights).
 
-### Reports
+### Expense Report
+A document detailing the expenses incurred by the organization (Crucial for financial tracking and management).
 
-#### Expense Report
-- Date
-- Expenses
-- Expense Type
-- Description of Expenses
+### Income Report
+A summary of the organization's income sources (Essential for financial oversight).
 
-#### Income Report
-- Date
-- Income Type
-- Description of Income
+### Donation Inflow
+Tracks donations received by the organization (Ensures transparency and accountability in financial dealings).
 
-#### Donation Inflow/Outflow
-- Donator/Donee Name
-- Amount
-- Date
-- Category
-- Donation Destination (Optional for Inflow)
+### Donation Outflow
+Tracks donations given out from the organization (Ensures transparency and accountability in financial dealings).
 
 ### Event
-- Location
-- Amount Raised
-- Amount Spent
-- Date
-- Event Name
+Organized activities or gatherings aimed at achieving specific organizational goals (Includes fundraising events, community service activities).
 
 ### Organization
-- Organization Name
-- Address
-- Email Address
-- Phone Number
-- Amount Donated/Received
-- Organization Type (Receiver or Giver)
-- Nonprofit or For-Profit Status
-- Category
+External entities that interact with the club (Includes partners and recipients of donations, categorized by their focus area).
 
 ### Umbrella Organization
-- Required Member Dues (Status, Date)
-- Required Reports (Status, Date)
+A higher-level entity providing oversight, resources, or affiliation benefits (The club may be a part of or associated with this entity for additional support and guidance).
 
 ### Balance Sheet
-- Total Money at Any Time
-- Date
-
+A financial statement reflecting the organization's financial status at a given time (Includes assets, liabilities, and equity, critical for understanding financial health).
 ## ER Diagram
 
 ![ER Diagram](./ER%20Diagram.jpg)
