@@ -129,5 +129,5 @@
 
 ## ER Diagram
 
-![ER Diagram](./ER Diagram.jpg)
+![ER Diagram](./ER%20Diagram.jpg)
 
