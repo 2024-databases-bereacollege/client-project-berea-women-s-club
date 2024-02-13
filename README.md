@@ -136,5 +136,5 @@ A higher-level entity that provides oversight, resources, or affiliation benefit
 
 ## ER Diagram
 
-![ER Diagram](./ER%20Diagram%20(updated).jpg)
+![ER Diagram](./ER%20Diagram.jpg)
 
