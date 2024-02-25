@@ -1,5 +1,12 @@
 # Berea Women Club Database Schema
 
+### Datebase Dream Team
+### Team Members & Roles
+### 1. Zaki Ayoubi - Quality Control 
+### 2. David Brothers - Communication Manager
+### 3. Clarisse Muterateka - Project Manager
+### 4. Jarine Fietsop - Project Analyst
+
 
 ## Schema Design Process
 
