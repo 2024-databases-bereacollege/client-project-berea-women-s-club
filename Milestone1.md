@@ -1,5 +1,12 @@
 # Milestone 1: Business Rules and ER Diagram
 
+### Datebase Dream Team
+### Team Members & Roles
+### 1. Zaki Ayoubi - Quality Control 
+### 2. David Brothers - Communication Manager
+### 3. Clarisse Muterateka - Project Manager
+### 4. Jarine Fietsop - Project Analyst
+
 ### Please note that this is a work in progress and we still need to meet with our client to get answer to some questions. 
 
 ## Business Rules
