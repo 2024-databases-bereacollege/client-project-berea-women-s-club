@@ -7,6 +7,7 @@
 ### 3. Clarisse Muterateka - Project Manager
 ### 4. Jarine Fietsop - Project Analyst
 
+
 ### Please note that this is a work in progress and we still need to meet with our client to get answer to some questions. 
 
 ## Business Rules
