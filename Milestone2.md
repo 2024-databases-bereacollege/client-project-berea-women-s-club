@@ -31,7 +31,9 @@ Incorporation of Business Rules: More explicitly integrating business rules into
 Added a cardinality between officer and Income Report () . 
 Changed the cardinality between Officer and Balance sheet from to  . 
 Modified the verbiage between “Organization” and “Donation outflow” from the work “donates” to “contributes to”. 
+We removed the Balance Sheet, Income statemet, Expense Report, and Parent Organization entities as they were redundant. 
+We have adjusted our ER_Diagram and our Relational Schema to represent these changes. 
 
 ## Relational Schema
 
-![Relational Schema](./Schema.png)
+![Relational Schema](./RelationalSchema.png)
