@@ -13,3 +13,15 @@ CREATE TABLE example (
     isInt smallint NOT NULL DEFAULT(0),
     isBool boolean
 );
+
+CREATE TABLE Organization (
+    organizationID serial PRIMARY KEY,
+    donationOutflow varchar(50) NOT NULL,
+    receiving varchar(50) NOT NULL,
+    adress varchar(50) NOT NULL,
+    contactInformation varchar(50) NOT NULL,
+    amount int NOT NULL,
+    organizationType varchar (50) NOT NULL,
+    category varchar (50) NOT NULL
+);
+
