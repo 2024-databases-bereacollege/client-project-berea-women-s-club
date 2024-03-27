@@ -1,46 +1,62 @@
 -- https://www.postgresqltutorial.com/
 
+CREATE TABLE member (
+    memberID SERIAL PRIMARY KEY,
+    firstName VARCHAR(100),
+    lastName VARCHAR(100),
+    email VARCHAR(100),
+    phoneNumber BIGINT,
+    streetName VARCHAR(150),
+    city VARCHAR(50),
+    usState VARCHAR(50),
+    zipCode INT,
+    dateOfBirth DATE,
+    dateJoined DATE DEFAULT CURRENT_DATE,
+    paidDues BOOLEAN,
+);
+
 CREATE TABLE donationInflow (
-    donationId SERIAL PRIMARY KEY,
-    donorName VARCHAR(100),
-    category VARCHAR(50),
-    donationDate DATE,
-    amount NUMERIC(12, 2)
+    donationInflowId SERIAL PRIMARY KEY,
+    category VARCHAR(100),
+    amount NUMERIC(12, 2),
+    donationDate DATE DEFAULT CURRENT_DATE,
+    FOREIGN KEY (organizationID) REFERENCES organization(organizationID),
 );
 
-CREATE TABLE example (
-    id serial PRIMARY KEY,
-    username varchar(32) UNIQUE,
-    description varchar(255) NOT NULL,
-    fkey_other integer REFERENCES othertable(otherid), 
-    isInt smallint NOT NULL DEFAULT(0),
-    isBool boolean
+CREATE TABLE donation_Ouflow (
+    donationOuflowId serial PRIMARY KEY,
+    donationDate DATE DEFAULT CURRENT_DATE,
+    amount NUMERIC(12, 2),
+    category varchar(100),
+    FOREIGN KEY (organizationID) REFERENCES organization(organizationID),
 );
 
-CREATE TABLE Donation_Ouflow (
-     donationOuflowId serial PRIMARY KEY,
-    donationDate varchar(10) NOT NULL,
-    amount integer,
-    doneeName varchar(40),
-    category varchar(30)
+CREATE TABLE event (
+    eventID SERIAL PRIMARY KEY,
+    eventName VARCHAR(150),
+    eventDate DATE DEFAULT CURRENT_DATE,
+    amountRaised NUMERIC(12, 2),
+    eventCost NUMERIC(12, 2),
+    eventType varchar(100),
+    FOREIGN KEY (memberID) REFERENCES member(memberID),
 );
--- CREATE TABLE example (
---     id serial PRIMARY KEY,
---     username varchar(32) UNIQUE,
---     description varchar(255) NOT NULL,
---     fkey_other integer REFERENCES othertable(otherid), 
---     isInt smallint NOT NULL DEFAULT(0),
---     isBool boolean
--- );
 
-CREATE TABLE Organization (
+CREATE TABLE host (
+    hostID SERIAL PRIMARY KEY,
+    eventlocation VARCHAR(150),
+    FOREIGN KEY (eventID) REFERENCES event(eventID),
+    FOREIGN KEY (memberID) REFERENCES member(memberID),
+);
+
+CREATE TABLE organization (
     organizationID serial PRIMARY KEY,
-    donationOutflow varchar(50) NOT NULL,
-    receiving varchar(50) NOT NULL,
-    adress varchar(50) NOT NULL,
-    contactInformation varchar(50) NOT NULL,
-    amount int NOT NULL,
-    organizationType varchar (50) NOT NULL,
-    category varchar (50) NOT NULL
+    organizationName VARCHAR(150) NOT NULL,
+    email VARCHAR(100),
+    phoneNumber BIGINT,
+    streetName VARCHAR(150),
+    city VARCHAR(50),
+    usState VARCHAR(50),
+    zipCode INT,
+    organizationType varchar (100),
 );
 

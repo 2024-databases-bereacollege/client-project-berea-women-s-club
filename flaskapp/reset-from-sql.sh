@@ -1,8 +1,10 @@
 # Remove objects from the database
-psql -c "DROP table IF EXISTS example;"
-psql -c "DROP table IF EXISTS othertable;"
-psql -c "DROP table IF EXISTS Organization;"
-psql -c "DROP table IF EXISTS  Donation_Ouflow;"
+psql -c "DROP table IF EXISTS member;"
+psql -c "DROP table IF EXISTS donatonInflow;"
+psql -c "DROP table IF EXISTS donationOutflow;"
+psql -c "DROP table IF EXISTS  event;"
+psql -c "DROP table IF EXISTS  host;"
+psql -c "DROP table IF EXISTS  organization;"
 
 
 # Create tables
