@@ -12,7 +12,14 @@ CREATE TABLE member (
     zipCode INT,
     dateOfBirth DATE,
     dateJoined DATE DEFAULT CURRENT_DATE,
+    memberType VARCHAR(),
     paidDues BOOLEAN
+);
+
+Create membershipType (
+    membershipID SERIAL PRIMARY KEY,
+    membertype VARCHAR(150) DEFAULT 'Member',
+    FOREIGN KEY (memberID) REFERENCES member(memberID)
 );
 
 CREATE TABLE donationInflow (
@@ -45,6 +52,7 @@ CREATE TABLE event (
     eventType varchar(100)
 );
 
+-- associative entity that connects member to event
 CREATE TABLE host (
     eventID INT,
     memberID INT,

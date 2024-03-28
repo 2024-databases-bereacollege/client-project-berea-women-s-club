@@ -1,5 +1,6 @@
 # Remove objects from the database
 psql -c "DROP table IF EXISTS member;"
+psql -c "DROP table IF EXISTS membershipType;"
 psql -c "DROP table IF EXISTS donatonInflow;"
 psql -c "DROP table IF EXISTS donationOutflow;"
 psql -c "DROP table IF EXISTS  event;"
