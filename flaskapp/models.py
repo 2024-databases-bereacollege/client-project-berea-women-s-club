@@ -10,9 +10,10 @@ class baseModel(Model):
 
 # Class Definitions
 # https://docs.peewee-orm.com/en/latest/peewee/models.html
-class OtherTable (baseModel):
-    otherid = PrimaryKeyField()
-    data = CharField(null=False)
+class membershipType (baseModel):
+    membershipID = PrimaryKeyField()
+    membershipType = CharField(255)
+    memberID = ForeignKeyField('self', null=True, backref='member')
 
 class member (baseModel):
     memberID = PrimaryKeyField()
