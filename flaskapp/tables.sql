@@ -12,11 +12,11 @@ CREATE TABLE member (
     zipCode INT,
     dateOfBirth DATE,
     dateJoined DATE DEFAULT CURRENT_DATE,
-    memberType VARCHAR(),
+    memberType VARCHAR(50),
     paidDues BOOLEAN
 );
 
-Create membershipType (
+Create TABLE membershipType (
     membershipID SERIAL PRIMARY KEY,
     membertype VARCHAR(150) DEFAULT 'Member',
     FOREIGN KEY (memberID) REFERENCES member(memberID)
