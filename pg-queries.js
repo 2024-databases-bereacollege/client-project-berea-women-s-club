@@ -1,4 +1,5 @@
 // This is not very modular. We're planning on creating a seperate module for each table's operation in the future. 
+// We have decided to use Node.js for server development hence the js file. 
 
 import pg from "pg";
 import env from "dotenv";
