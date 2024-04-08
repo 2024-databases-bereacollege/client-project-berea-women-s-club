@@ -77,7 +77,7 @@ async function getMemberDues(year, status) {
   const endDate = `${year}-12-31`;
 
   try {
-    const result = await pool.query(query, [startDate, endDate, status]);
+    const result = await db.query(query, [startDate, endDate, status]);
     return result.rows; // Return the fetched rows
   } catch (err) {
     console.error('Error executing fetchMemberDues query:', err);
@@ -467,7 +467,7 @@ async function deleteMember(memberId) {
       FROM donationOutflow do 
       LEFT JOIN organization o ON do.organizationID = o.organizationID
     `;
-    const { rows } = await pool.query(query);
+    const { rows } = await db.query(query);
     return rows;
   }
   
@@ -478,7 +478,7 @@ async function deleteMember(memberId) {
       LEFT JOIN organization o ON do.organizationID = o.organizationID 
       WHERE donationOutflowId = $1
     `;
-    const { rows } = await pool.query(query, [donationOutflowId]);
+    const { rows } = await db.query(query, [donationOutflowId]);
     return rows;
   }
   
@@ -501,7 +501,7 @@ async function deleteMember(memberId) {
       LEFT JOIN organization o ON do.organizationID = o.organizationID 
       ORDER BY ${orderBy}
     `;
-    const { rows } = await pool.query(query);
+    const { rows } = await db.query(query);
     return rows;
   }
   
@@ -511,7 +511,7 @@ async function deleteMember(memberId) {
       FROM donationOutflow
       GROUP BY EXTRACT(YEAR FROM donationDate)
     `;
-    const { rows } = await pool.query(query);
+    const { rows } = await db.query(query);
     return rows;
   }
   async function insertDonationOutflow(donationData) {
@@ -521,7 +521,7 @@ async function deleteMember(memberId) {
       VALUES ($1, $2, $3, $4) 
       RETURNING *;
     `;
-    const { rows } = await pool.query(query, [organizationID, amount, category, donationDate]);
+    const { rows } = await db.query(query, [organizationID, amount, category, donationDate]);
     return rows[0];
   }
   
@@ -533,13 +533,13 @@ async function deleteMember(memberId) {
       WHERE donationOutflowId = $5 
       RETURNING *;
     `;
-    const { rows } = await pool.query(query, [organizationID, amount, category, donationDate, donationOutflowId]);
+    const { rows } = await db.query(query, [organizationID, amount, category, donationDate, donationOutflowId]);
     return rows[0];
   }
   
   async function deleteDonationOutflow(donationOutflowId) {
     const query = 'DELETE FROM donationOutflow WHERE donationOutflowId = $1 RETURNING *;';
-    const { rows } = await pool.query(query, [donationOutflowId]);
+    const { rows } = await db.query(query, [donationOutflowId]);
     return rows[0]; // Return the deleted record
   }
   
